@@ -57,7 +57,9 @@ modified) y se pondra rojo.
 -Vamos, entonces, a la terminal y si ejecutamos status, veremos que figura que hubo modificaciones en index.html
 -Si nosotros queremos saber CUAL fue la modificacion/es realizada, ejecutamos $git
 diff index.html y veremos los cambios especificos que se realizaron en dicho/s
-documentos
+documentos.
+Nota: VER ESTO, porque si pones git diff aparece, pero al querer elegir el doc
+HTML da error, ni idea.
 
 
 Esto sería lo basico de GIT, pero luego veremos la segunda parte, el tema del repo
