@@ -1,0 +1,52 @@
+MODULO 4 - RESPONSIVE WEB DESIGN
+
+BLOQUE IV- 2-MEDIA QUERIES-FRAMEWORKS CS
+https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+https://developer.mozilla.org/es/docs/Web/CSS/Media_Queries/Using_media_queries
+Los media queries son basicamente reglas de CSS que incluyen propiedades si alguna condicion es verdadera, lo que sirve para que el sitio se vaya acomodando a los dispositivos segun necesidad.
+
+*Siempre cuentan con la regla @media y combinan operadores logicos para definir estas condiciones. Vamos a la basica, si la pantalla es de 600px o mas chica, el color cambia a celeste:
+<style>
+body {
+  background-color: lightgreen;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+Aca lo que pasa es que el fondo es verdecito SALVO que baje de los 600 y ahi se pone celeste. Esta regla de quiebre es llamado Breakpoint, que es el punto limite que define cada adaptacion a dispositivos para que el sitio sea responsivo.
+
+*Algo que es clave que dicen siempre es que DISEÑES PARA CELU PRIMERO. O sea, es preferible que pienses el sitio estructurado primero para las pantallas pequeñas y dividas las columnas para web, dado que hoy se entra menos ahí, por ejemplo, de esta manera:
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+
+LIBRERIAS FULL RESPONSIVE
+Logicamente, los media queries son INFINITOS, por lo que se vuelve super engorroso tratar de hacer cada uno de ellos desde cero para adaptar el contenido y el sitio. por ende, existe un recurso a mano que nos puede salvar, que son las LIBRERIAS FULL RESPONSIVE para poder, mediante definiciones de clases, crear sitios responsivos sin tener que escribir 200 millones de lineas de codigo:
+Bootstrap - https://getbootstrap.com/
+Foundation - https://get.foundation/
+Tailwind - https://tailwindcss.com/
+
+Por ejemplo, vos entras en https://getbootstrap.com/docs/4.0/layout/grid/ y ya te tira la regla para que puedas ajustar el sitio segun pixeles y demas. Ventajas de estas librerias? Ahorran millones de horas. Puede ser que los clientes quieran que sean tuyas propias, pero son recursos invaluables para aprender como hacer esto. Consejo: seguir a todos estos en redes (developer y w3 schools tambien) para ver las actualizaciones e ir leyendo como se hace todo.

@@ -1,0 +1,101 @@
+BLOQUE 3 - ELEMENTO DE BLOQUE - ELEMENTO DE LÍNEA - FORMULARIOS
+
+*ELEMENTOS DE BLOQUE Y LÍNEA*
+Una distinción clave que hay que entender es la que existe entre un elemento de BLOQUE y uno de LÍNEA. 
+
+1) Elemento de bloque
+Un elemento de bloque es aquel que ocupa toda la fila en la que se encuentra. 
+Ejemplo
+Si ponemos un título y un párrafo así:
+
+<h1>Hola<h1>
+
+<p>Chau<p>
+
+Esos 2 elementos se van a renderizar uno por debajo del otro, y no van a ocupar, excepto que los modifiquemos mediante CSS, el mismo espacio que otro. Esto sucede porque los navegadores automaticamente agregan un MARGEN para ocupar todo el espacio disponible por defecto. Ya cuando sepamos CSS podremos trabajar mejor con ello.
+
+En este link podemos ver los elementos de bloque (block-level elements) del lenguaje HTML, como lo son <h1>, <p> o <ul>
+https://www.w3schools.com/html/html_blocks.asp
+
+
+2) Elemento de línea
+El elemento de línea es aquel que ocupa solamente el espacio necesario, y que no hace falta que empiece con una nueva línea. El ejemplo más común es <span>. Si probamos ponerlo y verlo, vamos a ver que solo marca de ancho lo que ocupa y ya, y no toma nada de margen.
+
+Ejemplo mix:
+<h1>Hola<h1> BLOQUE
+<span>Mundo<span> LINEA - queda chiquito y solo te marca el ancho del texto
+<p>Cruel<p> BLOQUE
+
+Otro elemento de linea es "la negrita", <strong>, con apertura y cierre. Ejemplo mix 2:
+<p>Este fue el <strong>formulario</strong> </p>
+
+
+RECORDAR que un elemento de línea NO PUEDE CONTENER a un elemento de bloque.
+
+
+*FORMULARIOS* - elemento <form>
+Acá lo que vamos a ver es el elemento <form>, que nos permitirá crear un formulario para que otra persona ingrese datos, sea por la razón que sea (contacto, inscripción, encuesta, etc.); y acá también aprenderemos el concepto de elementos ANIDADOS:
+
+- <form>, por ejemplo, sería el elemento PADRE de <label> e <input>, que veremos a continuación, ya que los ANIDA en su interior y cierra con un </form>
+
+Para crear un formulario, iniciemos DEFINIENDO un elemento <form>, es decir, escribí <form> tal cual sin elegir otras opciones pues esas son más avanzadas.
+Dentro de él, si hacés SHIFT+ENTER, podés utilizar las líneas que desees para comenzar a meter las <label>, es decir, las categorías que necesitás sean completadas o respondidas; y los <input>, o sea, los espacios donde aquellas serán completadas.
+
+1) Elemento LABEL
+Lo primero que tenemos que poner son las <label>, es decir, las categorías o campos que queremos sean respondidas, en esta forma:
+<label>Nombre</label>
+Pero si renderizo eso solo, unicamente veremos un texto y ya. Por ende...
+
+2) Elemento INPUT
+Lo siguiente sera ingresar el <input>, que será el campo para ingresar el texto, y cuyos atributos definen el tipo de ingreso a ese espacio. Para lo más simple, debemos comenzar con:
+
+<label>Nombre</label>
+<input type 
+Y escribiéndolo así te larga el listado de las categorías, las cuales son un montón, y conviene ir explorándolas, pero por ahora elegimos "text". Hay, por ejemplo:
+-text
+-e-mail
+-number
+-password (ingreso de clave, se ven solo asteriscos)
+-date (solo formato de fecha, te adjunta un calendario)
+-file (para adjuntar)
+-submit (para un boton de enviar)
+Y así, bocha
+
+<label>Nombre</label>
+<input type="Nombre"
+
+Y agregar el atributo PLACEHOLDER, que es una especie de texto de ayuda para señalar qué va específicamente ahí.
+
+<label>Nombre</label>
+<input type="Nombre" placeholder="Ingrese su nombre aquí" />
+
+Y RECORDA QUE INPUT SE CIERRA EN SI MISMO COMO IMG, NO ES DE DOBLE FUNCION.
+
+*Hasta ahí viene todo bien y basico, pero, como hemos aprendido, todos estos elementos de bloque se combinan en una sola linea, dejando estos valores que estan correctamente ingresados muy feamente dispuestos y, ademas, sin una direccion a la cual llamar para ingresar los datos. Por ende, tenemos que saber ciertas cosas de los formularios, como si fuesemos desarrolladores back-end, y agregarle a <form> el atributo action, el cual define a que pagina va a ir lo que el usuario ingrese en el formulario. Entonces, ahí pasamos a:
+
+<form action="lapaginadondevanlascosas.php" method="post">
+    <label>=Nombre:</label>
+    <input type="text" name="nombre" placerholder="Ingrese su nombre">
+
+Donde action será la página hacia donde va la informacion, method el metodo HTTP que se usa para enviar el formulario, y name el nombre del formulario. 
+
+A ver, de todo esto se encarga el desarrollador backend, porque es quien resuelve los metodos de funcionamiento internos de lo que vos escribis hacia afuera. Pero eso no quita que no sepas esto basico como para dominar los formularios y, al menos, no depender de otros o poder llevarlo adelante rapido.
+
+Atributos name y method para el formulario
+a. name
+Si bien placeholder lo que hace es dar como un texto de aclaracion para ayudar a quien ingresa los datos, name es super importante porque le da nombre a la variable que estamos ingresando y sera vital a la hora de que el backend lo almacene en el servidor. Por ende, debemos agregar este atributo denominando a la variable anterior en la parte de input (similar al termino que usemos en cada label):
+
+<form action="lapaginadondevanlascosas.php" method="post">
+    <label>=Nombre:</label>
+    <input type="text" name="nombre" placerholder="Ingrese su nombre">
+    <label>=Apellido:</label>
+    <input type="text" name="apellido" placerholder="Ingrese su apellido">
+
+b. method
+Es el metodo HTTP que se usa para enviar el formulario. Aca hay un tema. Los desarrolladores frontend deberian usar el metodo post porque, de esa manera, la URL solo va a agregar un "?" al final cuando envíes la info. En cambio, si usás get y tenes definidos los nombres de las variables ya, en la ruta de la URL van a aparecer todos los datos ingresados (tipo como cuando buscas en Google), por lo que datos sensibles podrian quedar expuestos (como contraseñas). Por eso, es recomendable usar el metodo POST, mas alla de que esto sea algo de backend mas que nada.
+
+
+
+3) Tema VALIDACION
+Tarea para la casa - averiguá cómo se hace la validación de los campos; es decir, como tenes ese metodo para que falle si no ingresas el dato solicitado. EN ESTE ARTICULO ESTA TODO, igual dicen que lo vamos a ver luego, pero es banda:
+https://lenguajehtml.com/html/formularios/validaciones-html5/

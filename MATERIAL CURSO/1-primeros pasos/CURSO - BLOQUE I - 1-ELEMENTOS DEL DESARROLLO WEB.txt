@@ -1,0 +1,41 @@
+BLOQUE 1 - ELEMENTOS DEL DESARROLLO WEB
+
+Primeros pasos
+1) Para comenzar a identificar y a entender los elementos del lenguaje HTML, que compone los sitios web, necesitamos un editor de texto plano. Voy a usar Visual Studio Code, pero hay miles más que sirven de cualquier manera
+
+2) Para empezar, debemos crear un directorio y un archivo nuevo y nombrarlo index.html; dado que, por defecto, el lenguaje toma como página de inicio a ese "indice" siempre. Y será allí donde arrancaremos a escribir nuestras primeras líneas de código.
+
+-Cabe destacar que una de las ventajas que tiene Visual Studio Code es que tiene muchas extensiones incorporadas, por lo que no tenés que escribir todo el código desde 0 siempre. Por ejemplo, si vos escribís "html" en la línea 1, ya te sugiere el complemento "emmet" con html5, el cual te tira una línea de código básica para crear una página simple.
+
+-Qué contiene el lenguaje html? Todos los elementos del sitio que no sean visuales, eso va en CSS: vínculos, texto, títulos y archivos.
+
+3) Bueno, ahora lo que vemos es un código básico y estándar de HTML y, en él, podemos identificar los 3 elementos principales: el elemento HTML, el elemento HEAD y el elemento BODY. Luego veremos más de ellos, pero hay que recordar que dentro de los 2 BODY va lo que irá en el cuerpo de la página.
+
+- Si ponemos <p>, usamos el comando "párrafo", y dentro de él, irá texto para el ejemplo
+
+- Además, prestemos atención a la función <title>, ya que dentro de ella estarán los títulos de los sitios (en las pestañas). Los títulos dentro de body pueden tener jerarquías (h1, 2, 3)
+
+4) Para probar cómo se vería, andá a Run & Debug, que tiene las opciones de correrlo en los navegadores (predeterminados o no). Hasta ahí nuestra primera paginita
+
+Elementos y atributos
+De los elementos (o etiquetas, como HTML), se desprenden funciones que los definen o modifican, los atributos. Un ejemplo básico es el del lenguaje:
+<html lang="en"> siendo LANG el atributo que le dice al elemento HTML que el lenguaje predeterminado está en inglés.
+
+Indentado (sangría)
+Más adelante veremos cómo funcionan los espaciados para los distintos elementos, todo tiene sentido para que se puedan leer y todos los desarrolladores sean capaces de hacerlo.
+
+5) Como dijimos, las 2 cosas más importantes son el elemento HEAD, que contiene los datos y METAdatos del encabezado y de la propia web, y el elemento BODY, que mostrará lo que veremos en el cuerpo del sitio.
+
+Un ejemplo para practicar 2 cosas es el tema de poner en práctica las diferentes jerarquías de títulos y del body. Si ponemos títulos del 1 al 6 en el cuerpo, veremos cómo el propio sistema los ordena de mayor a menor
+<body>
+    <h1> Titulo 1 <h1>
+    <h2> Titulo 2 <h2>
+Y así, saldrán los diferentes títulos en orden de tamaño descendente. Salen así ahora porque, sin la CSS, nosotros vemos los estilos de navegador determinados nada más
+
+- Recordemos algo que es lógico, pero igual, que es que todos los elementos y atributos vienen de palabras en inglés, así que pensemos eso a la hora de buscarlos y aplicarlos. Ejemplo: la <h> es por "heading", encabezado, para el caso de los títulos, y la <p> de "paragraph" y así
+
+6) PARA CONCLUIR, recordemos mantener ordenado, línea por línea todo así, seamos nosotros mismos u otros los que lean estos códigos, podamos ver las cosas de forma clara y sencilla. Tema indentado es recordar que existe para ordenar y discernir las jerarquías de elementos principales y secundarios y los listados:
+<main> (HTML, por ejemplo, el elemento principal, no puede haber más de 1)
+   <ul> (lista no ordenada, en inglé, algún elemento sin lista)
+       <li>Contenido<li> (lista ordenada, los títulos, ponele)
+</main>

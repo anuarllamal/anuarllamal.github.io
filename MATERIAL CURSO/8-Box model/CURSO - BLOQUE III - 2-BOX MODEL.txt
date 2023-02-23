@@ -1,0 +1,62 @@
+MODULO 3 - CSS
+
+BLOQUE II - BOX MODEL (MARGIN-BORDER-PADDING-CONTENT)
+https://www.w3schools.com/css/css_boxmodel.asp
+
+Luego de haber visto que el documento puede estar dividido en diferentes secciones o contenidos semánticos, llega el CSS Box Model. Este modelo plantea que a todo elemento HTML hay que pensarlo como una caja; no solo a las secciones (article, nav, header) sino a los elementos en sí (p, img, etc).
+
+Todos los elementos en HTML pueden ser pensados como una caja, la cual consiste de 4 partes, de afuera hacia adentro:
+Margin: el area fuera del border, es siempre transparente
+Border: la linea limite entre el padding y el margen
+Los diferentes tipos de border los tenemos acá, pueden ser en puntitos, dobles, solidos, etc:
+https://www.w3schools.com/css/css_border.asp
+Padding: seccion transparente alrededor del contenido que queda dentro del borde
+Content: el contenido ppmente dicho (img-texto)
+
+-Alto y ancho de los elementos-
+Clave recordar que cuando vos delimitas width/height de algo en HTML, solamente estas marcando el tamaño del propio elemento, por eso, para saber cual va a ser su tamaño total, tenemos que agregar las dimensiones de margin-border-padding.
+*Ancho total: ancho + left padding + right padding + left border + right border + left margin + right margin
+*Alto total: alto + top padding + bottom padding + top border + bottom border + top margin + bottom margin
+
+-Cómo se calculan las dimensiones? RECORDA SEGUIR LAS AGUJAS DEL RELOJ
+Si, por ejemplo, vamos a styles.css y marcamos que todos los h1 tengan:
+border 1px solid black
+padding 5px
+margin 30px
+
+a. Vemos que el título es rodeado por un border finito y, al inspeccionarlo, vemos un margin cuadrado (30x30x30x30), así como una pequeña separación del contenido con el borde (de 5px por lado). Y cómo lo marca Chrome si inspeccionás? Así:
+margin 30px
+padding 20px (5x5x5x5)
+
+b. Entonces, si queremos aplicar diferentes dimensiones de margin, por ejemplo, podemos hacerlo mediante el uso de margin-top, margin-bottom, margin-left y margin-right:
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 20px;
+Te aparece:
+margin 40 10 20
+padding 20 20 15 15 
+Porque, por regla general, se lee arriba-derecha-abajo-izquierda. Como izquierda y derecha son iguales, te figura solo 10 como valor doble a los lados.
+
+c. OTRA forma de hacer esta nomenclatura es poner los valores EN UNA SOLA LINEA:
+margin 30px 15px 25px 20px
+       (top right bottom left)
+Y, si inspeccionás abajo vas a ver que quedó EN EL SENTIDO DE LAS AGUJAS DEL RELOJ
+
+
+NOTA APARTE - LIPSUM.COM
+La página "lipsum.com" es un generador de texto gratuito para cuando tengamos que ir haciendo pruebas. Te genera la cantidad de líneas o párrafos que necesites usando la famosa Loren Ipsum y nos sirve para eso, para ir rellenando.
+
+Lo trajo a colación para que veamos, dentro de un <section> cómo podemos ir teniendo diferentes cajas dentro de cajas; o sea, dentro de cada apartado de la web (como una sección), podemos tener h1, p, ul y muchos li, span y demas, y cada uno tendra su estilo, el cual podremos personalizar hasta el mas minimo detalle.
+Ejemplo:
+section {
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+  }
+

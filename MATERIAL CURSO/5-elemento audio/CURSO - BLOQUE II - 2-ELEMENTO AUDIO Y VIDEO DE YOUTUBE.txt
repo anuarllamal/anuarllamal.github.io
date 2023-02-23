@@ -1,0 +1,88 @@
+BLOQUE II - ELEMENTOS MULTIMEDIA HTML
+
+2) ELEMENTO AUDIO
+El elemento audio se inserta de la MISMA forma que el de video, en principio, con la siguiente estructura:
+
+<audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
+
+Básicamente, arranca con el atributo controls tambien, y laburamos igual en el tema de los tipos soportados (tratar de tener mas de 1 fuente para el archivo cosa de que el navegador lea el primero que reconozca y tengas un fail safe). Los tipos de archivo soportados en HTML5 son
+-mp3 (mpeg)
+-wav
+-ogg
+
+En estas 2 webs tenemos los atributos que pueden ir con <audio>:
+https://www.w3schools.com/tags/tag_audio.asp
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
+
+Pero los principales son estos:
+-autoplay: se usa IGUAL que con video. Chrome no permite el autoplay salvo que le pongas el muted (lo cual es medio irónico)
+
+<audio controls autoplay muted>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
+
+-controls
+-loop: podés usarlo para que quede en bucle
+-muted
+-preload
+-src
+
+
+3) INSERTAR (EMBEBER) VIDEOS DE YOUTUBE
+https://www.w3schools.com/html/html_youtube.asp
+
+La realidad es que, a menos que manejes bien la conversion de archivos y formatos, te soluciona mucho si reproducís lo que necesites desde la propia YT. Para hacerlo, hay 2 formas:
+
+a. O utilizar el elemento <iframe> y con el atributo src citar directamente el link y, obvio, agregar los parametros que quieras. Esta primera forma arranca asi:
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+
+Al lado de <iframe ponemos altura y ancho y en la src el link y listo, pero podemos agregarle AL LINK los valores mediante 1 y 0:
+
+-autoplay: (recorda que Chrome no lo permite salvo muteo) 1 lo activa
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+</iframe>
+
+-loop (1 lo activa)
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
+</iframe>
+
+-controls (para que no los veamos, 1 es el default)
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+</iframe>
+
+
+b. O utilizar el codigo embedded de YouTube (</>) e introducirlo completo desde el video para que salga tal cual como está:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+Va a quedar distinto, porque lo toma directo desde YT. Esto sale, recordá de "incorporar", que sale desde la opcion compartir en YT.
+
+
+NOTA EXTRA - COMENTARIOS EN HTML
+Podemos introducir comentarios, es decir, notas DENTRO del codigo para los otros desarrolladores o para nosotros, tan solo ingresando <!-- y veremos como se pone todo en verde. Los comentarios no solo sirven para hacer notas sino tambien para ocultar elementos del html que no quiero borrar (si se los clavo adelante, se ponen en verde y no salen en el sitio pero si en el codigo).
+Ejemplo:
+
+En este video de YT:
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+
+Si le clavo un comentario encima, no saldria pero quedaria dentro:
+<!--<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+--!>
+
+Y si no, puedo usarlo para efectivamente comentar

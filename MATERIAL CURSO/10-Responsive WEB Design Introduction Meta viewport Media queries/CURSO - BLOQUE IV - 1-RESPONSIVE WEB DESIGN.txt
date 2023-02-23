@@ -1,0 +1,61 @@
+MODULO 4 - RESPONSIVE WEB DESIGN
+
+BLOQUE I - Responsive WEB Design Introduction/Meta viewport/Media queries
+https://www.w3schools.com/css/css_rwd_intro.asp
+1) RWD
+El Responsive Web Design se trata de lograr que tu pagina sea vea bien en todo tipo de aparatos, es decir, este optimizada para pc, para tablet, para smarttv y para celus. La clave esta es en que no tiene que quedar info fuera para que la web se ajuste a equipos mas chicos, sino que tiene que adaptarse ese contenido al aparato. Cabe destacar que esto no es un programa que usa JS sino que solo se maneja con HTML y CSS, como venimos trabajando.
+
+
+2) Meta viewport
+El primer concepto con el que tenemos que trabajar es con el Viewport. Qué es?
+-El viewport es la parte visible para el usuario de una pagina web, la cual varia segun la plataforma en la que se este corriendo el codigo.
+-Antes las webs eran estaticas, pero ahora ya desde HTML5 arrancas con un head que introduce la posibilidad de meter mano en él. Siempre que arrancas un nuevo HTML, aparece:
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+El ""width=device-width lo que hace es que la web se adapte al ancho del aparato en el que se ve la web; mientras que el initial-scale=1.0 hace que el zoom siempre arranque en 100%. Si el elemento meta viewport no está, el contenido no se adapta y queda fijo, lo que resulta en un desastre de navegacion, como se ve aca:
+https://www.w3schools.com/css/css_rwd_viewport.asp
+
+Más alla de que vamos a hablar de los frameworks para construir estos escalados para mejorar la experiencia del usuario, lo importante es que hay reglas de oro, como las siguientes:
+a. Que el usuario no tenga que scrollear LATERALMENTE (obvio sí up-down). Si pasa, es porque la web no esta optimizada y hay info a los costados que no se acomoda. Ni que tenga que hacer ZOOM OUT para ver todo.
+b. No usar grandes elementos fijos, ajustarlos para que quepan en viewport
+c. Que la web no dependa solo de un tipo de viewport para funcionar, ya que el CSS y los pixeles son distintos en todos los aparatos
+d. Usar los CSS Media Queries para (completar luego)
+
+
+3) Grid-View
+Antes de pasar a trabajar con los distintos frameworks (como Bootstrap), otro concepto que tenemos que aprender es el de la vista de grilla. Es muy util pensar en el diseño de las web como dentro de una grilla, dividida en columnas, y nos sirve para maquetarlas, para luego ver como se comportan. Normalmente, el 100% del ancho de los sitios es de 12 columnas (hasta 16), y la idea es que se achiquen y expandan a medida reubiques la ventana del explorador.
+
+*Construyendo una grilla responsiva*
+https://www.w3schools.com/css/css_rwd_grid.asp
+-Debemos definir que todos los elementos de HTML tengan el box-sizing equivalente a border-box, lo que te asegura que el padding y el border queden dentro de las dimensiones de los elementos.
+-Otra regla de oro sera, entonces, utilizar el (*) para que todos queden definidos asi. Entonces, si vamos a CSS asi:
+
+.menu {
+  width: 25%;
+  float: left;
+}
+.main {
+  width: 75%;
+  float: left;
+}
+
+Vemos que la seccion menu y la seccion main flotan ambos a la izquierda, pero los posiciona en ese orden y no los superpone. Y ocupan ambos 25 y 75 de la pantalla. Pero claro, esto es en una web con 2 columnas nada mas. Si queremos definir una web responsiva de 12 columnas, debemos dividir el 100%/12=8.33% ocupara cada columna, creamos una class="col-" y con el numero correspondiente:
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+Esto lo vamos a retomar luego mejor, dado que es introductorio.
+
+
+4) Media Queries
+Es lo que nos va a permitir aplicar estilos segun el tamaño de pantalla que haya. Luego lo retomaremos
+https://www.w3schools.com/css/css_rwd_mediaqueries.asp

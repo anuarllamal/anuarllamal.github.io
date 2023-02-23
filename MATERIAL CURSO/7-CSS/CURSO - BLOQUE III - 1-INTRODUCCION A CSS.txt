@@ -1,0 +1,110 @@
+MODULO 3 - CSS
+
+BLOQUE I - INTRODUCCION A CSS (CAPA DE PRESENTACION)
+https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/CSS_basics
+El CSS no es un lenguaje en si, si no, un lenguaje de "hojas de estilo", que permite aplicar estilos a tu documento HTML. 
+-La estructura basica del funcionamiento de CSS tiene 3 elementos:
+
+p {
+  color: red;
+}
+
+a. Selector: el elemento HTML que comienza la regla. Esto SELECCIONA los elementos a los cuales le vas a dar estilo (solo <p> en este ejemplo)
+b. Declaración (statement): define a cual de las PROPIEDADES del elemento le queres dar un estilo determinado. "color: red"
+c. Valor (value): a continuación de la propiedad que querés personalizar, luego de los 2 puntos, le asignás el VALOR, es decir, una de muchas posibilidades de apariencia para cada propiedad. "red"
+
+-Además, muy importante destacar que:
+a. Las REGLAS para cada selector deben estar encapsuladas entre llaves {}
+{=alt+123
+}=alt+125
+b. La propiedad se separa de su valor con :
+c. Las propiedades, porque obviamente que un selector (o varios) van a tener mas de una, se separan con ;
+p {
+  color: red;
+  width: 500px;
+  border: 1px solid black;
+}
+
+Como dijimos arriba, puede haber varios selectores y, de ser asi, se separan con comas (,):
+p,li,h1 {
+  color: red;
+}
+
+
+METODOS DE APLICAR LOS ESTILOS CSS A NUESTROS DOCUMENTOS
+(En este enlace, LITERAL, esta TODO lo que se puede hacer y usar de CSS, fav)
+https://htmlcheatsheet.com/css/
+
+1) (desaconsejado) Mediante el elemento <style>, dentro del elemento <head>, lo que se llama "Inline styles":
+
+<style>
+        p {
+            color: red;
+            width: 300px;
+        }
+
+        h1 {
+            color: grey;
+            font-weight: bold;
+        }
+
+    </style>
+
+Cuando vayamos a la web, veremos que todos los <p> seran rojos y tendrán 300 px de ancho; aparte de que el titulo quedara en gris y en negrita. Cual es el problema? No solamente que es desprolijo y engorroso en el codigo, sino que solo aplica dentro del HTML actual, por lo que en un documento con diversos HTML, tendriamos que hacer siempre lo mismo al pedo. Por eso, es que es desaconsejable Y vamos al punto 2:
+
+*Aclaracion: vamos a la consola*
+En la consola, si nos frenamos a inspeccionar los elementos, vamos a ver las propiedades y valores que le estamos poniendo a cada elemento. Y asi como en la parte de elementos (izquierda) veremos la estructura de nuestro HTML, a la derecha estan, en la parte de styles, todos las reglas que vamos construyendo y si vienen de algun archivo de css o del mismo codigo.
+
+
+2) Mediante una hoja externa de estilo (styles.css) para que el HTML haga referencia a ella permanentemente y no esté dentro del mismo codigo:
+
+-Lo mas recomendable, justamente, es crear una carpeta dentro del Visual Studio llamada CSS y, dentro de ella, crear un archivo llamado styles.css, el cual sera nuestra unica hoja externa de referencia, a la cual llamaremos y de la cual tomaremos las propiedades para cada elemento de los diversos HTML que nuestro proyecto tenga.
+
+-Como CSS no es un lenguaje de marcado, en la hoja iremos trazando los estilos y en HTML hacer referencia a ella mediante el elemento <link> y los atributos rel, type y href. La referencia de href acá es RELATIVA, pues hace referencia a documentos locales, seria ABSOLUTA si fuese un hipervinculo.
+
+-Entonces, para este ejemplo, en la hoja CSS debere copiar lo que habia puesto en pleno documento:
+
+       p {
+            color: red;
+            width: 300px;
+        }
+
+        h1 {
+            color: grey;
+            font-weight: bold;
+        }
+
+Y dentro del <head> de nuestro HTML, hacer la referencia mediante <link>:
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+
+-Para que el href funcione, pone el = y elegi la carpeta CSS y el documento, cosa de que lo cite correctamente, asi:
+<link rel="stylesheet" type="text/css" href="CSS/style.css">
+
+Esto es mucho más práctico y ordenado, porque podes trabajar estructurando en HTML, y meter TODOS los estilos en una sola hoja, referenciar y listo.
+
+
+3) (desaconsejada) Inline style
+Basicamente, es clavar una modificacion de propiedad y valor en pleno codigo, y queda igual de fiero que la opcion 1, porque los documentos se vuelven muy grandes y puede ser engorroso, aparte de que aplica a 1 sola hoja, como el caso 1:
+
+<head>
+    <title>CSS con inline styles</title>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+<body>
+    <h1>Título principal</h1>
+
+    <h3 style="border: 1px solid red"> Subtítulo</h3>
+
+    <p>Hola</p>
+    <p>Soy</p>
+    <p>Yo</p>
+</body>
+
+Para el caso (borre varias lineas), a pesar de que hace referencia a la hoja de estilos para darle valor a las propiedades que dijiste, vos estas modificando en pleno codigo al elemento h3, algo que podrias haber hecho tranquilamente en css y evitarte ese desperdicio y desorden de codigo.
+
+
+COMENTARIOS EN CSS
+Podemos, al igual que con HTML, insertar comentarios que seguramente nos seran muy utiles (ya sea para comunicarnos con otro desarrollador o para nosotros mismos), de la misma manera que conocemos ya, pero con la sintaxis siguiente:
+/**
+Esto es un comentario
+*/
