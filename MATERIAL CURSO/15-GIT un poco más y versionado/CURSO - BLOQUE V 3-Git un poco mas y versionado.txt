@@ -1,0 +1,46 @@
+MODULO 5 - HOSTING Y REPOSITORIOS
+
+BLOQUE III- MÁS DE GIT Y DE LOS VERSIONADOS
+Dos conceptos más:
+1) git blame
+TEORICAMENTE, utilizando el comando git blame index.html, te va a mostrar todo el historial de cambios desde el inicio, pero me da error en mi proyecto, asi que tengo que ver como se usa en un proyecto desde cero.
+
+2) git log
+El git log te permite ver los commit que hiciste a lo largo del tiempo y quien los hizo, con nombre y correo, aparte de que se genera el commit ID, que es un hash unico para identificar dicho cambio. Puedo combinarlo tambien con git show,
+seguido de los primeros 7 numeros del hash y me mostrara todo el historial de cambios correspondiente a cada commit.
+
+Y algo que viene del cuadro de uso, los status de GIT:
+untracked - sin estar siquiera agregado a un area de trabajo de GIT
+unmodified (verde)
+modified (marrón) - modificado y sin haber sido commited
+staged (rojo) - cuando queda en el area de trabajo virtual de GIT hasta que lo llevamos a otra parte
+
+Pero ahora, vamos a la otra pata de GIT. Ya vimos que GIT nos guarda todo el historial de cambios del proyecto pero de forma local. Sin embargo, si lo borramos fisicamente o si no contamos con nuestra pc encendida en el momento, nuestro proyecto y sus cambios no existen en ningun lado. Por ende, debemos hablar de GitHub y lo que son los repositorios remotos.
+
+
+REPOSITORIOS REMOTOS
+Los mas famosos son GitHub, GitLab o Bitbucket, que son 3 plataformas que nos permitiran hospedar proyectos usando Git en un servidor y estaremos seguros de que nuestros cambios estaran respaldados online.
+
+No lo hago para el ejemplo, pero el instructivo es super sencillo. Hay que registrarnos en cualquiera de estos 3 sitios (voy con GitHub yo) y:
+
+a. Desde github.com
+-Creamos un nuevo repositorio en https://github.com. 
+-Le damos nombre, descripción, seleccionamos si va a ser un proyecto publico o privado y dejamos el check de crear README sin marcar. 
+-Le damos a crear repositorio y con esto ya tenemos el repositorio donde alojaremos nuestro proyecto.
+
+b. Desde nuestra terminal
+Ejecutamos los siguientes comandos:
+git init
+
+git add .
+
+git commit -m "first commit"
+
+git remote add origin https://github.com/NOMBRE_USUARIO/NOMBRE_PROYECTO.git
+(Aca ira el link del repositorio que tendremos que copiar)
+
+git push -u origin master
+Y con el comando PUSH lo enviaremos en linea y estara respaldado
+
+
+Y listo. Existen, en otro tema, interfaces graficas (GUI), que sirven para hacer mas sencillo el trabajo de GIT. Honestamente, es mejor aprender desde la terminal a usar los comandos, para no complicarnos e ir aprendiendo de a poco.

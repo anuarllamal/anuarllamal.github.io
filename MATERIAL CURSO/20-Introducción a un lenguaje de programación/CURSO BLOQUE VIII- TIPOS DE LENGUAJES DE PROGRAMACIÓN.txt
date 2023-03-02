@@ -1,0 +1,38 @@
+MÓDULO VIII - TIPOS DE LENGUAJES DE PROGRAMACIÓN
+
+BLOQUE I - INTRODUCCIÓN A UN LENGUAJE DE PROGRAMACIÓN
+https://es.wikipedia.org/wiki/Lenguaje_de_programaci%C3%B3n
+-Según Wiki, un lenguaje de programación es un lenguaje formal que le proporciona a una persona, en este caso el programador, la capacidad de escribir (o programar) una serie de instrucciones o secuencias de órdenes en forma de algoritmos para controlar el comportamiento físico o lógico de un sistema informático, para asi obtener diversasclases de datos o ejecutar determinadas tareas. Al conjunto de órdenes escritas mediante un lenguaje de programación se le denomina programa informático.
+
+Ojo: no es lo mismo que un "lenguaje informático". Un lenguaje informático engloba
+diferentes lenguajes de programacion, como hacen los lenguajes de marcado (HTML),
+que son un conjunto de instrucciones para estructurar documentos. HTML no toma
+ninguna decisión, solo muestra algo. Cuando usemos JS, empezaremos a ordenarle a
+la pc que haga algo y veremos su comportamiento.
+
+
+-Programar es el proceso de crear un software fiable mediante la escritura, prueba, depuración, compilación o interpretación, y mantenimiento del código fuente de dicho programa informático. Básicamente, este proceso se define aplicando lógicamente los siguientes pasos:
+
+1) El desarrollo lógico del programa para resolver un problema en particular: diagrama de flujos y desarrollo del algoritmo
+
+2) Escritura de la lógica del programa empleando un lenguaje de programación 
+específico (codificación del programa).
+
+3) Compilación o interpretación del programa hasta convertirlo en lenguaje de máquina: en el proximo modulo lo explica mejor, pero un lenguaje que se COMPILA tiene un codigo que produce un binario, mientras que un lenguaje que INTERPRETA recien cuando vamos escribiendo se va ejecutando esa interpretacion.
+
+4) Prueba y depuración del programa: desarrollar requiere de mucha paciencia. Vamos hasta a poder "hacer hablar" a los programas para ir viendo su ejecucion y fijandonos los posibles errores antes de llegar a las versiones finales.
+
+5) Desarrollo de la documentación: esto es algo FUNDAMENTAL. Es absolutamente una
+excelente practica, pero vital para que no perdamos todo o que nuestro codigo pueda ser leido y mejorado por otro sea por la razon que sea, que documentemos las nociones basicas de que es lo que hace nuestro programa. O sea, no se trata de documentar cada linea, pero sí lo necesario y la logica de como funciona el programa y lo que necesita, por ejemplo:
+-Version de JS
+-Arquitectura del sistema en el que corre
+-Funcion del programa y funcionamientos intermedios
+-Como lo instalo, como lo pruebo
+-Etc
+
+*GitHub*
+Nosotros ya aprendimos a subir a un repositorio remoto nuestro proyecto para crear
+versionados respaldados de nuestro propio camino, y usando esta herramienta (o
+cualquiera similar), no solo podemos dejar un readme en linea con la documentacion
+sino inclusive echar mano de una "wiki" propia que tienen, que te permite armar
+el paso a paso (estilo Wikipedia) de lo necesario y las funcionalidades de tu codigo y tener un verdadero manualcito prolijo de todo.

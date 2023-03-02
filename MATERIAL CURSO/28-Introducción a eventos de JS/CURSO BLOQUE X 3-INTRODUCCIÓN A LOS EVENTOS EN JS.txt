@@ -1,0 +1,101 @@
+MÓDULO X - FUNDAMENTOS DE JS (PARTE I)
+
+BLOQUE III - INTRODUCCIÓN A LOS EVENTOS DE JS
+Vamos a ver y a avanzar mediante distintos tipos de eventos de JS:
+
+
+1) ADD EVENT LISTENER - para todo el documento
+Continuando con los eventos, vamos a ver otra forma de utilizar el evento de click. Nosotros en el modulo pasado pusimos este evento:
+
+document.getElementById("boton").onclick = function () {
+    console.log("Capturamos el evento click");
+    document.getElementById("demo").innerHTML = "Estamos probando nuestro primer evento"
+});
+
+Que lo que hacia era acceder al elemento que queria agarrar (y al evento a continuacion), podemos:
+a. referenciar a document y agregarle un "event listener", un "escuchador de eventos"
+b. hacer que ese event listener ESCUCHE al evento click
+c. y le agregamos una funcion para que ejecute a continuacion (p.ej.: que diga Hola mundo con un console.log
+d. Y además, le ponemos que cambie el texto al hacer click en la pantalla con el get element by id de abajo. Entonces:
+
+*Va el ejemplo*
+
+document.addEventListener('click', function () {
+    console.log("Hola mundo desde Event Listener");
+    document.getElementById("demo").innerHTML = "Estamos probando nuestro primer evento"
+});
+
+Esto reflejara en la consola el mensaje y al hacer click se cambiara el texto.
+
+Aca tenemos todos los eventos DOM de JS:
+https://www.w3schools.com/jsref/dom_obj_event.asp
+Y ver como se relaciona con todos los objetos
+
+
+2) ADD EVENT LISTENER - para una parte especifica
+Si quiero hacerlo prolijo y pedirle al document que busque el elemento y que cuando se haga click, se mustre el mensaje en la consola, entonces, deberemos agregar:
+
+document.getElementById('boton').addEventListener('click', function () {
+    console.log("Hola mundo desde Event Listener");
+    document.getElementById("demo").innerHTML = "Estamos probando nuestro primer evento"
+});
+
+Le pido que lo busque primero y luego que el event listener haga en base al click luego y que haga la funcion.
+
+
+3) CAMBIAR EL COLOR DE FONDO
+Aca tenemos otro evento para, por ejemplo, cambiarle el color de fondo mediante un boton. Primero, tenemos que crear un nuevo boton en HTML:
+
+<button type="button" id="boton_color">Click para cambiar color de fondo</button>
+
+Y luego armar la funcion:
+
+document.getElementById('boton_color').addEventListener('click', function () {
+    document.body.style.backgroundColor = '#5DFF00';
+});
+
+para pedirle al documento que busque el id del segundo boton creado y que al hacer click se active la funcion de cambio de color.
+
+***NOTA***
+Guardo esta pagina para poner los codigos de colores en hexa o en rgb para estas funciones:
+https://htmlcolorcodes.com/es/
+
+
+4) AGREGAR BOTON PARA RESTABLECER EL CAMBIO DE COLOR DE FONDO
+Podemos, por ultimo, meter un boton para que restablezca el color que tenemos en CSS por default, al cual llamaremos 'boton_default'. Para ello, agregaremos estas lineas tanto a HTML como a JS:
+
+HTML
+<button type="button" id="boton_default">Click para volver al color anterior</button>
+
+JS
+document.getElementById('boton_default').addEventListener('click', function () {
+    document.body.style.backgroundColor = 'lightblue';
+});
+
+
+5) OCULTAR ELEMENTOS HTML
+Para ocultar, crearemos otro boton (se puede hacer de otra manera, pero el boton es por ahora una opcion viable) para ocultar texto mediante un display=none:
+
+HTML
+<button type="button" id="boton_ocultar">Click para ocultar un texto</button>
+
+JS
+document.getElementById('boton_ocultar').addEventListener('click', function () {
+    document.getElementById('demo').style.display = 'none';
+});
+
+Busca el id 'demo' que es el del <p> y le aplica un "dejar de mostrar" al hacer click sobre dicho boton.
+
+
+6) QUE PASE ALGO CUANDO EL USUARIO ENTRE
+Por ejemplo, que agarre todos los elementos clase "parrafo" y que les cambie el color mediante una funcion:
+
+HTML - definir una clase
+<p class="prueba">Hola Mundo 1</p>
+<p class="prueba">Hola Mundo 2</p>
+
+JS
+const collection = document.getElementsByClassName("prueba");
+for (let i =0; i < collection.length; i++) {
+    collection [i].style.backgroundColor = "yellow";
+}

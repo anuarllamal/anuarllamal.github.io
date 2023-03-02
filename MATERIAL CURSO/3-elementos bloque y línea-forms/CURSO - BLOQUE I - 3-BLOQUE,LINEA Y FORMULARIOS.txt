@@ -95,7 +95,6 @@ b. method
 Es el metodo HTTP que se usa para enviar el formulario. Aca hay un tema. Los desarrolladores frontend deberian usar el metodo post porque, de esa manera, la URL solo va a agregar un "?" al final cuando envíes la info. En cambio, si usás get y tenes definidos los nombres de las variables ya, en la ruta de la URL van a aparecer todos los datos ingresados (tipo como cuando buscas en Google), por lo que datos sensibles podrian quedar expuestos (como contraseñas). Por eso, es recomendable usar el metodo POST, mas alla de que esto sea algo de backend mas que nada.
 
 
-
 3) Tema VALIDACION
 Tarea para la casa - averiguá cómo se hace la validación de los campos; es decir, como tenes ese metodo para que falle si no ingresas el dato solicitado. EN ESTE ARTICULO ESTA TODO, igual dicen que lo vamos a ver luego, pero es banda:
 https://lenguajehtml.com/html/formularios/validaciones-html5/

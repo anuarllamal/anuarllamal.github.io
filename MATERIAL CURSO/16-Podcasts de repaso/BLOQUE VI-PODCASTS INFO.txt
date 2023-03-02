@@ -1,0 +1,101 @@
+1) ¿Cómo encarar un proyecto web?
+VALIDAR EL ALCANCE DEL PROYECTO
+-De entrada debe quedar en claro qué es lo que estamos construyendo (una
+landing page, una tienda online, lo que sea)
+
+-Por ende, lo primero sera encarar una reunion inicial con el cliente y
+que nos cuente:
+a. De que va el proyecto?
+b. Que espera el cliente de nosotros?
+
+-La idea es que podamos interpretar lo que quiere y delimitar las
+posibilidades tecnicas de lo que se puede y no hacer
+
+-En esa primera reunion tenemos que entender la estructura del portal que
+se necesita para bosquejarlo. Recomendado ir con cuaderno y lapicera para
+dibujar como te lo vas a imaginar. Esta es la etapa del BOCETADO
+
+BOCETADO
+Hay plataformas como AdobeXD o firma/filma que nos va a permitir armar un
+boceto digital del cliente. Por que conviene armar un boceto y no ir
+directo a la maqueta? Porque si vamos a la maqueta de una, el cliente nos
+va a pedir que cambiemos varias cosas y nos vamos a haber quemado el bocho
+al pedo en escritura de codigo. Entonces, lo mejor es bocetar en las
+primeras reuniones.
+
+OTRAS CLAVES
+-Que nos tenga el material listo. Nosotros podemos armar un maquetado con
+loren ipsum para ejemplo, pero necesitamos lo suyo
+-No ser hartantes pero mirar TODO lo que te mande y reunirte con los
+feedbacks armados
+-Ser juiciosos a la hora de cotizar el tiempo de laburo pensando en el tipo
+de pagina que sea (una landing, varias hojas, si es solo css o si tiene
+js, etc)
+
+
+2) ¿Cómo encarar un proyecto web? Segunda parte: feedback del cliente
+No dejar que el proceso de desarrollo precodigo lleve mas de 2 semanas,
+lo recomendable es verlo, discutirlo con el cliente y arrancar, pero no
+entrar en un ciclo de ajustes y ajustes. Que sea:
+-Reunion e ideas + boceto en el acto
+-Mandale boceto + su feedback
+-Segunda reunion con boceto digital y el feedback incorporado
+-Cotizar correctamente
+-Arrancar a laburar pero pedirle TODO el material (texto, fotos y videos 
+de lo que quiera incluir, logos y todo eso)
+
+-SER REALISTA CON LAS FECHAS QUE SE PACTAN. Si decis una semana, es una
+semana. Considerar lo que lleva (es estatica, dinamica?). Mejor decir
+"de aca a una semana tengo el primer scroll y el segundo scroll y tal
+cosa". DEJARLO BIEN CLARO
+
+-NO DECIR NI TODO QUE NO NI TODO QUE SI. Lo que se puede hacer, se hace y,
+lo que no, explicar por que no y ofrecer una alternativa.
+
+
+3) Lógica de negocio y algo más: primera parte
+A estas alturas, estamos aprendiendo HTML, CSS y algo de GIT, y vamos hacia
+JS, pero debemos pensar en las tecnologias que tenemos y en como deberiamos
+ir encarando todo.
+
+-HTML NO es un lenguaje de programacion, sino uno de estructura web, ese
+es JS. JS se lo toma como el lenguaje de la web, y lo recomendable es que
+lo aprendamos desde cero y puro; es decir, que no vayamos a las librerias
+tipo node.js o react.js, porque es mejor aprender a usarlo y comprender
+como nos va a permitir agregar COMPORTAMIENTO en nuestra web mediante
+<scripts>
+
+-Las interacciones que tenga el usuario con las webs se llaman EVENTOS. Y
+debemos ver con el cliente las posibilidades tecnicas para cada evento
+que te pidan. P.ej:
+a. Botones
+b. Reels de fotos
+c. Menúes
+
+
+4) Lógica de negocio y algo más: segunda parte
+BACKEND
+Ahora bien, todo esto es pensando en el navegador y en el cliente, pero
+todas estas validaciones se hacen contra el servidor, por ende, aca esta
+la parte del backend. Justamente, node.js, php, c+, python, son todos 
+lenguajes que se usan para procesar las peticiones que hagan los usuarios
+en el servidor.
+
+Si no esta esta parte hecha, los datos que se envien y las peticiones que
+se hagan nunca van a almacenarse en una base de datos y se van a perder.
+Toda confirmacion (por mail), validacion de datos y eso, es backend.
+
+Es por eso que es SUPER IMPORTANTE VALIDAR ESTO TAMBIEN, porque tenemos
+que ver con el cliente los eventos que quieren y nosotros ver como se van
+a ejecutar.
+
+-Pensando, tambien, en logica de negocio, es darse cuenta de la usabilidad
+que va a tener la pagina. Ponele que el cliente piensa en un evento de 100
+personas como maximo, tu formulario tiene que cerrarse con la persona 100
+y vos aclararlo. Cosas asi.
+
+
+HOSTING/DOMINIO
+Recordá tambien, por ultimo, que es super importante aclarar el costo de
+la contratacion de un hosting y de un dominio, y recorda que son costos
+de ellos.

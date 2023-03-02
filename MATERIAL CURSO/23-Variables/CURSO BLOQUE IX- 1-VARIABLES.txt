@@ -1,0 +1,40 @@
+MÓDULO IX - ESTRUCTURAS DE LA PROGRAMACIÓN
+
+BLOQUE I - VARIABLES: TIPOS Y FUNCIONES
+Las variables son elementos que te permiten guardar valores para usarlos en un algoritmo, que estan formados por un espacio de almacenamiento dentro de una pc (dentro de la memoria) y un valor identificado por un nombre.
+
+Cada una de las variables puede admitir diferentes tipos de DATOS (numeros, logicos, texto, etc), pero para JS, los 5 ppales son:
+a. Numeros: con coma flotante, enteros y con decimales
+b. String: caracteres (texto)
+c. Booleano: datos logicos (true o false)
+d. Undefined: sin valor asignado
+e. Null: sin valor
+
+*Ejemplo de JS*
+
+let lenght = 16;                           //Número
+A lenght le asigno el valor 16
+
+let lastName = "Johnson";                  //String: cadena de texto
+A lastName le asigno el valor de texto Johnson
+
+let x = {firstName:"John", lastName:"Doe"} //Objeto
+A este objeto x le asigno los atributos firstName y lastName con valores de txt
+
+
+DOS CONSEJOS FUNDAMENTALES
+1) TENER MUCHO OJO CON LOS TIPOS DE DATOS (no sumes numeros con strings y asi)
+-Como tengo la libertad de definir una variable como quiero (JS no tipado):
+let x = 16 + "Volvo"
+-Esto, que no guarda ningun sentido logico, igual va a ser sumado por JS y va a dar 16Volvo de resultado (lo larga como un string).
+
+2) NOMBRA ESPECIFICAMENTE LAS VARIABLES (no uses x generico porque si) cosa de que no termine una variable de nombre generico con diferentes valores, como aca:
+
+let x;       // Declara la variable x (no la define, va a salir undefined)
+console.log (x)
+x = 5;       // Ahora a x le dimos un valor numérico
+console.log (x)
+x = "John"   // Y ahora x almacena un string
+console.log (x)
+
+A las variables hay que darles un nombre que les provea CONTEXTO, porque, si no, no solo vamos a caer en un error de este estilo, sino que es una buena practica de programacion para ayudarnos a nosotros (y a quien sea) a leer el codigo facilmente

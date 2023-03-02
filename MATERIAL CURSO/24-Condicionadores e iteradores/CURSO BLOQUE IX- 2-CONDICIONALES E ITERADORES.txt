@@ -1,0 +1,49 @@
+MÓDULO IX - ESTRUCTURAS DE LA PROGRAMACIÓN
+
+BLOQUE II - CONDICIONALES E ITERADORES
+
+CONDICIONALES
+Avanzando en el tema de variables, comenzamos con el primer gran tipo de sentencias en JS (y en programacion en general) que son los CONDICIONALES. Una sentencia condicional es un conjunto de comandos que se ejecutan si una condicion es verdadera. JS soporta dos sentencias condicionales: if...else y switch:
+
+a. if...else
+
+var edad = 18;
+
+if (edad > 18) {
+    console.log("La persona es mayor de edad");
+} else {
+    console.log("La persona es menor de edad");
+}
+
+La sentencia if comprobara si la condicion logica es verdadera; mientras que la opcion else ejecutara la sentencia si esa condicion es falsa. El sistema lo que muestra es una salida por el lado que cumpla la condicion que sea verdadera.
+
+-En el caso de arriba, como la edad es 18 y 18 no es mayor que 18, el resultado sera que la persona sera menor de edad.
+-Si al if de edad le agrego => 18, dira que es mayor de edad, ya que entrara gracias al igual.
+
+*Nota* probablemente, cada programador haga los codigos de su forma propia, por lo que recordar que no hay un unico camino para resolver las cosas, p.ej., podriamos haber puesto otros nombres de variables o poner de una el mayor o igual, etc. Lo importante es resolver el problema, no como.
+
+
+ITERADORES
+Los iteradores (o bucles) son operadores que te permiten ahorrar banda de codigo para, en vez de escribir mil veces una sentencia, utilizar secuencias logicas que te muestren todos los resultados que necesitabas. Se arman asi:
+
+Iterador for
+
+var x = 0;
+
+inicio  condicion  incremental
+for (x; x < 5; x++) {
+    console.log("El valor de x es:"+x); - sentencia que se ejecutara
+}
+
+La sentencia for crea un bucle con 3 expresiones opcionales:
+-La primera se ejecuta una sola vez antes del codigo
+x
+-La segunda define la condición de ejecución del codigo
+x < 5
+-Y la tercera se ejecuta cada vez hasta que se cumplan las condiciones del codigo
+x++
+
+Mientras que x sea menor a 5, ejecutara todas las lineas que salgan como resultado. Cuando llegue a no cumplir mas la condicion, sale del ciclo for y corta.
+
+***ALGO SUPER IMPORTANTE***
+TENER EXTREMO OJO DE QUE LA SENTENCIA NO TENGA LAS CONDICIONES MAL HECHAS, es decir, que en vez de tener que mostrarte 10 valores, te tenga que mostrar infinitos numeros, la pc se VA A TILDAR jajaja. Revisá bien la logica de los operadores antes de hacer nada porque el sistema recorda que no va a detectar errores antes sino que lo va a buscar ejecutar siempre hasta el final.

@@ -1,0 +1,15 @@
+MÓDULO VII - PENSAMIENTO LÓGICO
+
+BLOQUE I - LÓGICA COMPUTACIONAL
+Básicamente, es un módulo introductorio sobre como pensar de forma logica para poder codificar las soluciones a los problemas que tengamos. Definido de manual, permite reconocer el problema que queremos solucionar, buscar una solución que podamos programar y analizar las salidas que obtengamos para formarnos conclusiones.
+
+De que forma deberiamos encararlo?
+a) Reconocer el problema que tenemos y, para ello, deberemos empezar con un diagrama de flujo; herramienta que nos permitira diagnosticar, buscar una solucion que podamos programar y analizar las salidas que tengamos para llegar a conclusiones.
+
+b) Entramos a Diagrams.net (favorita), elegimos crear diagrama de flujo y ya tenemos el ejemplo. Ya con eso, tenemos la posibilidad de pensar de forma logica un problema. Vamos a como funciona:
+
+Los cuadrados son los enunciados y los rombos son los condicionales. Entonces planteamos el problema de saber si llueve y llevamos el paraguas. Es una pavada, pero lo que armamos son instrucciones, porque, de hecho, estamos armando un ALGORITMO. Un algoritmo informatico es un conjunto de instrucciones definidas, ordenadas y acotadas para resolver un problema, resolver un calculo o desarrollar una tarea.
+
+Pensar logicamente implica pensar en todos los procesos de nuestro desarrollo, de como funciona, y de las ordenes que necesitamos darle para que algo opere, muestre algo, funcione de tal manera o solvente problemas. Necesitamos pensar en todos los escenarios y esto nos va a servir para aprender TODOS los lenguajes de programacion.
+
+Ahora vamos a empezar con JS, pero pensar logicamente nos va a ayudar a solo tener que aprender a escribir codigo cuando profundicemos en el y cuando aprendamos otros lenguajes (como node, react, php, c+, etc) porque la idea en todos ellos es entender el modelo de problema y solucion para todas las variables informaticas que necesitemos. Un (if) statement en cualquier lenguaje de programacion es identico, si pasa algo, pasa esto otro. Es pensar en el camino logico antes de lanzarse a escribir codigo.

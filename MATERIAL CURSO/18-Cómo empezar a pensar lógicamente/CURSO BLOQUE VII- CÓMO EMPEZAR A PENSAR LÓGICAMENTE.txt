@@ -1,0 +1,32 @@
+MÓDULO VII - PENSAMIENTO LÓGICO
+
+BLOQUE II - CÓMO EMPEZAR A PENSAR LÓGICAMENTE
+En esta segunda parte, avanzamos sobre técnicas que son muy utiles para pensar logicamente y que nos pueden servir para resolver problemas y no atascarnos en la escritura de codigo.
+
+1) Algoritmo Divide y vencerás
+https://es.wikipedia.org/wiki/Algoritmo_divide_y_vencer%C3%A1s
+Esto implica resolver un problema difícil, dividiéndolo en partes más simples tantas veces como sea necesario, hasta que la resolución de las partes se torna obvia. La solución del problema principal se construye con las soluciones encontradas.
+
+Esta metodologia, sin pensar en la tecnica aun, implica que, a un problemon, lo dividamos en dos partes iguales y planteemos soluciones para cada parte para que la solucion al todo sea evidente o surja.
+
+
+2) DRY (Do Not Repeat Yourself)
+https://codeyourapps.com/el-principio-dry-no-te-repitas/
+El principio DRY ayuda a cualquier desarrollador a ser más eficiente y producir un código más fácil de seguir y con menos fallas. Basicamente, es evitar copiar, pegar y duplicar fragmentos de nuestro mismo código. Una pieza de código en el sistema tiene que ser única, no ambigua, tener un objetivo único y no puede repetirse. 
+
+
+3) WET (Write everything twice)
+https://sacavix.com/2021/01/principios-kiss-dry-wet-yagni/
+Es algo relacionado y hasta contradictorio con el anterior, pero quiere decir que podes preguntarte “¿No he escrito esto antes?” dos veces, pero nunca tres.
+
+
+4) KISS (Keep it simple, stupid)
+https://sacavix.com/2021/01/principios-kiss-dry-wet-yagni/
+Quiere decir que las cosas sencillas funcionan mejor, a nivel de código, que lo mantengamos simple. Implica que nuestra solución tanto en diseño como en implementación debe ser sencilla, no excederse en sobre-diseño o sobre-arquitectura cuando no sea necesario. Evitar el nivel de complejidad de la solución cuando no sea estrictamente necesario.
+
+Estos principios, junto al uso de los diagramas de flujo, nos permiten construir los ALGORITMOS. El algoritmo NO es el codigo, sino el camino logico que el desarrollador de cualquier codigo puede seguir y decodificar en el lenguaje que corresponda con la sintaxis que corresponda.
+
+
+*UML*
+https://es.wikipedia.org/wiki/Lenguaje_unificado_de_modelado
+Algo que es muy interesante para estudiar y aprender es el unified modeling language, que es el lenguaje de modelado estandar para todos los sistemas hoy, y te permite ver, especificar y construir un sistema desde todos los puntos de vista: procesos, clientes, funcionalidades, casos de uso, etc. Es algo que, al igual que los lenguajes de bases de datos, es MUY util hoy en dia.
