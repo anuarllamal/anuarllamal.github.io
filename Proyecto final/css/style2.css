@@ -37,3 +37,7 @@ span {
     font-size: 300;
     text-transform: uppercase;
 }
+
+#mostrar {
+    display: none;
+}
