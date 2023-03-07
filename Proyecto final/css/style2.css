@@ -1,6 +1,7 @@
 body {
     background-color: aquamarine;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;   
 }
 
 div {
@@ -9,6 +10,7 @@ div {
     padding: 12px;
     width: 60%;
     margin: 0 auto;
+    min-width: 300px;
 }
 
 fieldset {
@@ -41,3 +43,17 @@ span {
 #mostrar {
     display: none;
 }
+
+.home {
+    flex-wrap: wrap;
+    min-width: 300px;
+}
+
+.in-flex {
+    flex:1
+}
+
+.in-flex:first-child {
+    flex:2
+}
+
